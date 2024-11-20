@@ -1,0 +1,32 @@
+networks:
+
+  t3lls_gate--app_net:
+    external: true
+
+services:
+
+  njs-cos:
+    build:
+      context: ./njs-cos/next-app
+      dockerfile: prod.Dockerfile
+    restart: always
+    networks: # internal port 3000
+      - t3lls_gate--app_net
+    env_file:
+      - ./njs-cos/.env
+    stop_grace_period: 0s
+
+  njs-cos-dev:
+    container_name: callofshame-njs-cos-dev
+    build:
+      context: ./njs-cos/next-app
+      dockerfile: dev.Dockerfile
+    restart: always
+    networks: # internal port 3000
+      - t3lls_gate--app_net
+    volumes:
+      - ./njs-cos/next-app/src:/app/src
+      - ./njs-cos/next-app/public:/app/public
+    env_file:
+      - ./njs-cos/.env
+    stop_grace_period: 0s
