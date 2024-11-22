@@ -35,7 +35,7 @@ export default function Home() {
                         🚧 Website is currently under construction. 🏗️
                     </div>
                     <div className={styles.h2}>
-                        while I am building you may want to have a look at <a href="https://tools.t3l.ls">other projects</a> of mine
+                        while I am building you may want to have a look at <a href="https://t3l.ls">other projects</a> of mine
                     </div>       
                 </div>
 
