@@ -32,7 +32,7 @@ export default function Home() {
 
                 <div id="fade-in" className={styles.footer}>
                     <div  className={styles.h1}>
-                        🚧 Website is currently under construction. 🏗️
+                        🚧 This website is currently under construction. 🏗️
                     </div>
                     <div className={styles.h2}>
                         while I am building you may want to have a look at <a href="https://t3l.ls">other projects</a> of mine
@@ -42,7 +42,6 @@ export default function Home() {
           </div> 
 
           <div className={styles.footer_bar}>
-
             <a href="/legal">
               Legal Notice / Impressum
             </a>
